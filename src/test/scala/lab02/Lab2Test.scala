@@ -5,18 +5,18 @@ import org.junit.Assert.*
 
 class Lab2Test:
 
-  val empty= Lab2.empty
+  val empty = Lab2.empty
   val isEmpty = Lab2.neg3(empty)
-  val select= Lab2.Expr
-  val compute= Lab2.Op
-  val value= 3
-  val expectedSum= 6
-  val expectedProduct= 9
+  val select = Lab2.Expr
+  val compute = Lab2.Op
+  val value = 3
+  val expectedSum = 6
+  val expectedProduct = 9
 
   //some tests
   @Test
   def testEmpty(): Unit = {
-    val notEmptyString= "hi"
+    val notEmptyString = "hi"
     assertTrue(isEmpty(notEmptyString))
   }
 
@@ -30,7 +30,7 @@ class Lab2Test:
   def testEvaluateAdd(): Unit = {
     val value = 3
     val addExpression = select.Add(select.Literal(value), select.Literal(value))
-    val sum= compute.evaluate(addExpression)
+    val sum = compute.evaluate(addExpression)
     assertEquals(expectedSum, sum)
   }
 
