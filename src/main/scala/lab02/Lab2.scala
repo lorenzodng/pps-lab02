@@ -4,7 +4,7 @@ import lab02.Lab2.Expr.{Add, Literal, Multiply}
 
 object Lab2 extends App :
 
-  // Task 1
+  // Task 1, svolto da solo
   def mult(x: Double, y: Double): Double = x * y
 
   def curriedMult(x: Double)(y: Double): Double = x * y
@@ -26,7 +26,7 @@ object Lab2 extends App :
   val divideBy3 = numerator(3)
   println(divideBy3)
 
-  // Task 2
+  // Task 2, svolto da solo
   // 3.
   // a)
   val f: Int => String = _ match
@@ -107,7 +107,7 @@ object Lab2 extends App :
   val addSubtractMultiply = composeThree(add, subtract, multiply)
   println(addSubtractMultiply(2))
 
-  // Task 3
+  // Task 3, svolto da solo
   // 7.
   def power(base: Double, exponent: Int): Double = exponent match
     case exponent if exponent == 0 => 1
@@ -137,7 +137,7 @@ object Lab2 extends App :
 
   println(reverseNumber(12345))
 
-  // Task 4
+  // Task 4, svolto da solo
   // 9.
   enum Expr:
     case Literal(x: Int)
