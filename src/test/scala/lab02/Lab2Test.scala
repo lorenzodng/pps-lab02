@@ -9,7 +9,7 @@ class Lab2Test:
   val isEmpty = Lab2.neg3(empty)
   val select = Lab2.Expr
   val compute = Lab2.Op
-  val value = 3
+  val valueOperation = 3
   val expectedSum = 6
   val expectedProduct = 9
 
@@ -28,16 +28,14 @@ class Lab2Test:
 
   @Test
   def testEvaluateAdd(): Unit = {
-    val value = 3
-    val addExpression = select.Add(select.Literal(value), select.Literal(value))
+    val addExpression = select.Add(select.Literal(valueOperation), select.Literal(valueOperation))
     val sum = compute.evaluate(addExpression)
     assertEquals(expectedSum, sum)
   }
 
   @Test
   def testEvaluateMultiply(): Unit = {
-    val value = 3
-    val multiplyExpression = select.Multiply(select.Literal(value), select.Literal(value))
+    val multiplyExpression = select.Multiply(select.Literal(valueOperation), select.Literal(valueOperation))
     val product = compute.evaluate(multiplyExpression)
     assertEquals(expectedProduct, product)
   }
